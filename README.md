@@ -80,3 +80,7 @@ npm run report            # open HTML report
 - Factory checks: data uniqueness/overrides/builders (where asserted by the sample tests)
 
 The remaining DemoQA sections (Alerts, Frames, Windows, Widgets and Interactions) are planned extensions, not yet implemented in this starter.
+
+## License
+
+[MIT](LICENSE)
