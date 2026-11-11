@@ -21,11 +21,11 @@ The Book Store API: create a disposable account, generate an auth token, add a c
 The account created by `bookStoreAccount` is deleted in `finally` regardless of test outcome. `deleteAccount()` tolerates a `404` (account already gone) but throws on any other failure — cleanup is real, not silently swallowed.
 
 ## Automated coverage
-See `docs/TEST_CATALOG.md`. One scenario: `src/modules/bookstore/tests/bookstore-api.spec.ts` — add a catalog book to a fresh account, verify it's in the collection. Tagged `@api @regression` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
+See `docs/TEST_CATALOG.md`. One scenario: `src/specs/bookstore/bookstore-api.spec.ts` — add a catalog book to a fresh account, verify it's in the collection. Tagged `@api @regression` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
 
 ## Run
 ```bash
-npx playwright test src/modules/bookstore/tests
+npx playwright test src/specs/bookstore
 ```
 
 ## Known limitations

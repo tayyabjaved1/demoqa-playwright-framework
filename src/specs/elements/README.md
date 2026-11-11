@@ -21,11 +21,11 @@ The Elements section's Text Box widget: fill in a name, email and two addresses,
 Nothing is persisted server-side; DemoQA just reflects the submitted form back on the same page. No teardown required.
 
 ## Automated coverage
-See `docs/TEST_CATALOG.md`. One scenario: `src/modules/elements/tests/text-box.spec.ts` — submit generated data, verify the output panel shows every field. Tagged `@smoke @ui` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
+See `docs/TEST_CATALOG.md`. One scenario: `src/specs/elements/text-box.spec.ts` — submit generated data, verify the output panel shows every field. Tagged `@smoke @ui` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
 
 ## Run
 ```bash
-npx playwright test src/modules/elements/tests
+npx playwright test src/specs/elements
 ```
 
 ## Known limitations

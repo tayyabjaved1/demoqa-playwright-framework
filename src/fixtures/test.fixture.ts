@@ -3,8 +3,8 @@ import { UserFactory } from '../data/factories/user.factory';
 import { StudentFactory } from '../data/factories/student.factory';
 import { FormFactory } from '../data/factories/form.factory';
 import { BookFactory } from '../data/factories/book.factory';
-import { TextBoxPage } from '../modules/elements/pages/text-box.page';
-import { PracticeFormPage } from '../modules/forms/pages/practice-form.page';
+import { TextBoxPage } from '../pages/elements/text-box.page';
+import { PracticeFormPage } from '../pages/forms/practice-form.page';
 import { BookStoreClient, type BookStoreAccount } from '../api/bookstore.client';
 
 const apiBaseURL = process.env.API_BASE_URL ?? 'https://demoqa.com';

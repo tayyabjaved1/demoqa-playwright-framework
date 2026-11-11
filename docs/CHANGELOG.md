@@ -2,9 +2,26 @@
 
 Notable framework changes are recorded here. Keep entries concise and include migration notes for breaking changes.
 
+## 1.4.0 - Layer-first directory structure
+
+- Restructured from module-first (`src/modules/<module>/{pages,tests}`) to
+  layer-first (`src/pages/<module>/`, `src/specs/<module>/`), matching
+  core-pw-e2e-tests' actual directory convention — a single top-level folder
+  per layer, module as the subfolder inside it.
+- Each module's `README.md` now lives under `src/specs/<module>/` (every
+  module has specs; not every module has page objects, so specs is the
+  universal home).
+- `playwright.config.ts`'s `testDir` moved to `./src/specs`.
+- Updated every relative import across the codebase, `scripts/check-docs-changes.mjs`'s
+  path patterns, and all docs/READMEs referencing the old paths.
+- Migration: any external reference to `src/modules/<module>/pages` or
+  `src/modules/<module>/tests` must be updated to `src/pages/<module>` /
+  `src/specs/<module>` respectively.
+- Verified: `npm run typecheck` clean; full suite 6/6 passing.
+
 ## 1.3.1 - Module READMEs
 
-- Added `src/modules/<module>/README.md` for all four sample modules (Elements,
+- Added `src/specs/<module>/README.md` for all four sample modules (Elements,
   Forms, Book Store, Factories), following `docs/templates/MODULE_README.template.md`:
   scope, navigation, architecture, test data, lifecycle/cleanup, automated coverage,
   run command, known limitations. `docs/MODULE_CATALOG.md` links to each.

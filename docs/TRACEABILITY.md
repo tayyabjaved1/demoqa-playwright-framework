@@ -4,11 +4,11 @@ Use stable requirement IDs so changes to test names do not silently break covera
 
 | Requirement ID | Requirement / behavior | Automated test | Status |
 |---|---|---|---|
-| ELM-TB-001 | User can submit text-box details and see the submitted values | `src/modules/elements/tests/text-box.spec.ts` | Implemented |
-| FRM-PF-001 | User can submit a valid practice form | `src/modules/forms/tests/practice-form.spec.ts` | Implemented |
-| BKS-API-001 | A Book Store API user can be created and authenticated | `src/modules/bookstore/tests/bookstore-api.spec.ts` | Implemented |
-| BKS-API-002 | Authenticated user can manage a book collection | `src/modules/bookstore/tests/bookstore-api.spec.ts` | Implemented |
-| DAT-FAC-001 | Factories produce fresh unique identifiers and support overrides | `src/modules/factories/tests/factory.spec.ts` | Implemented |
+| ELM-TB-001 | User can submit text-box details and see the submitted values | `src/specs/elements/text-box.spec.ts` | Implemented |
+| FRM-PF-001 | User can submit a valid practice form | `src/specs/forms/practice-form.spec.ts` | Implemented |
+| BKS-API-001 | A Book Store API user can be created and authenticated | `src/specs/bookstore/bookstore-api.spec.ts` | Implemented |
+| BKS-API-002 | Authenticated user can manage a book collection | `src/specs/bookstore/bookstore-api.spec.ts` | Implemented |
+| DAT-FAC-001 | Factories produce fresh unique identifiers and support overrides | `src/specs/factories/factory.spec.ts` | Implemented |
 
 Each test above is now broken into named `test.step()` calls (open, act, verify);
 the requirement mapping is unchanged, but a future failure's step name in the report

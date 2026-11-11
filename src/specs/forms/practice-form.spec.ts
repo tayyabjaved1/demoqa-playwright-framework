@@ -1,4 +1,4 @@
-import { test } from '../../../fixtures/test.fixture';
+import { test } from '../../fixtures/test.fixture';
 
 test.describe('Forms - Practice Form', { tag: ['@regression', '@ui'] }, () => {
   test('submits a dynamically generated student profile', async ({ practiceFormPage, student }) => {

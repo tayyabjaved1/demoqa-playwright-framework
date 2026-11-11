@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { test } from '../../../fixtures/test.fixture';
+import { test } from '../../fixtures/test.fixture';
 
 test.describe('Book Store - API', { tag: ['@api', '@regression'] }, () => {
   test('creates a unique user, adds a catalog book and verifies the collection', async ({ bookStoreClient, bookStoreAccount, bookCatalog }) => {

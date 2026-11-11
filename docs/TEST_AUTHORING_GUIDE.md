@@ -92,7 +92,7 @@ npm test
 For a focused test:
 
 ```bash
-npx playwright test src/modules/forms/tests/practice-form.spec.ts
+npx playwright test src/specs/forms/practice-form.spec.ts
 ```
 
 Inspect `playwright-report` and `test-results` when a test fails. Attach traces/screenshots to bug reports where useful.

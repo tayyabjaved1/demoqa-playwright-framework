@@ -21,11 +21,11 @@ The Practice Form: submit a generated student profile (name, email, gender, mobi
 Nothing is persisted server-side; DemoQA renders the confirmation modal from the submitted form data only. No teardown required.
 
 ## Automated coverage
-See `docs/TEST_CATALOG.md`. One scenario: `src/modules/forms/tests/practice-form.spec.ts` — submit a generated profile, verify the confirmation modal shows name/email/mobile. Tagged `@regression @ui` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
+See `docs/TEST_CATALOG.md`. One scenario: `src/specs/forms/practice-form.spec.ts` — submit a generated profile, verify the confirmation modal shows name/email/mobile. Tagged `@regression @ui` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
 
 ## Run
 ```bash
-npx playwright test src/modules/forms/tests
+npx playwright test src/specs/forms
 ```
 
 ## Known limitations

@@ -1,4 +1,4 @@
-import { test } from '../../../fixtures/test.fixture';
+import { test } from '../../fixtures/test.fixture';
 
 test.describe('Elements - Text Box', { tag: ['@smoke', '@ui'] }, () => {
   test('submits generated text-box data and verifies the output', async ({ textBoxPage, textBoxData }) => {

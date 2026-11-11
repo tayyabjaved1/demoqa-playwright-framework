@@ -48,15 +48,16 @@ npm run report            # open HTML report
 - `src/data/builders`: fluent builders for complex scenario data.
 - `src/fixtures`: Playwright fixtures that inject generated data, Page Objects and API helpers into tests.
 - `src/core`: shared abstractions such as BasePage.
-- `src/modules`: feature-oriented Page Objects and specs.
+- `src/pages`: feature-oriented Page Objects, one folder per module.
+- `src/specs`: feature-oriented specs, one folder per module.
 - `src/api`: API clients for test setup and teardown.
 
 ## Add a new module
 1. Add domain types in `src/data/types`.
 2. Add a factory under `src/data/factories` using `CommonGenerator` for shared primitives.
-3. Add a Page Object under `src/modules/<module>/pages`.
+3. Add a Page Object under `src/pages/<module>`.
 4. Use the shared typed fixtures where available, or import the domain factory directly in a new spec. Adding a new factory does not require changing Playwright configuration; add a typed fixture only if the team wants it injected automatically.
-5. Add specs under `src/modules/<module>/tests` and import `test` from the shared fixture.
+5. Add specs under `src/specs/<module>` and import `test` from the shared fixture.
 
 ## Data strategy
 - Each factory call creates fresh data; UUID-based emails/usernames reduce collisions.

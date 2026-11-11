@@ -21,11 +21,11 @@ These tests call the factories directly (no fixture injection) to assert their o
 Nothing persisted — pure in-memory data generation. No teardown.
 
 ## Automated coverage
-See `docs/TEST_CATALOG.md`. `src/modules/factories/tests/factory.spec.ts`, three scenarios: uniqueness, role presets/overrides, fluent builder composition. Tagged `@regression` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
+See `docs/TEST_CATALOG.md`. `src/specs/factories/factory.spec.ts`, three scenarios: uniqueness, role presets/overrides, fluent builder composition. Tagged `@regression` via `test.describe`'s native `{ tag: [...] }` option, not embedded in the title string.
 
 ## Run
 ```bash
-npx playwright test src/modules/factories/tests
+npx playwright test src/specs/factories
 ```
 
 ## Known limitations

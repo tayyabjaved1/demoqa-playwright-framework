@@ -36,9 +36,9 @@ Playwright config / browser / projects / reporters
 
 | Layer | Location | Responsibility |
 |---|---|---|
-| Test/spec | `src/modules/**/tests` | Scenario intent, actions orchestration and assertions |
-| Page Objects | `src/modules/**/pages` | Page-specific locators and user actions |
-| Components | `src/modules/**/components` | Reusable widgets/sections shared by pages |
+| Test/spec | `src/specs/**` | Scenario intent, actions orchestration and assertions |
+| Page Objects | `src/pages/**` | Page-specific locators and user actions |
+| Components | `src/pages/**/components` | Reusable widgets/sections shared by pages |
 | Fixtures | `src/fixtures` | Create and inject per-test dependencies/data; manage lifecycle |
 | Factories | `src/data/factories` | Build domain-shaped runtime test data |
 | Generators | `src/data/generators` | Shared primitives such as UUID, email, name, phone and date |
@@ -77,10 +77,10 @@ The `bookStoreAccount` fixture additionally creates an account through the Book 
 
 For a new module, add:
 
-- `src/modules/<module>/pages/*.page.ts`;
-- `src/modules/<module>/components/*.component.ts` when reusable UI parts exist;
+- `src/pages/<module>/*.page.ts`;
+- `src/pages/<module>/components/*.component.ts` when reusable UI parts exist;
 - `src/data/types` types and `src/data/factories` factory if the module needs domain data;
-- `src/modules/<module>/tests/*.spec.ts`.
+- `src/specs/<module>/*.spec.ts`.
 
 Import `test` and `expect` from `src/fixtures/test.fixture.ts`. Factories can be imported directly, so a new domain factory does not require editing the global fixture or Playwright config. Add a typed fixture only when the dependency is broadly reused and its lifecycle belongs in the fixture layer.
 

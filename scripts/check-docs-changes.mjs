@@ -26,9 +26,9 @@ const hasAny = (...paths) => paths.some((path) => changedSet.has(path));
 const requirements = [];
 const add = (condition, message) => { if (condition) requirements.push(message); };
 
-const specsChanged = changed.some((p) => /^src\/modules\/.*\/tests\/.*\.spec\.[cm]?[jt]sx?$/.test(p));
+const specsChanged = changed.some((p) => /^src\/specs\/.*\.spec\.[cm]?[jt]sx?$/.test(p));
 const factoriesChanged = changed.some((p) => /^src\/data\/(factories|generators|builders|types)\//.test(p));
-const moduleCodeChanged = changed.some((p) => /^src\/modules\//.test(p) && !/^src\/modules\/.*\/tests\//.test(p));
+const moduleCodeChanged = changed.some((p) => /^src\/pages\//.test(p));
 const fixturesChanged = changed.some((p) => /^src\/fixtures\//.test(p));
 const apiChanged = changed.some((p) => /^src\/api\//.test(p));
 const coreChanged = changed.some((p) => /^src\/core\//.test(p));
@@ -38,7 +38,7 @@ add(specsChanged && !hasAny('docs/TEST_CATALOG.md'), 'Spec changes require docs/
 add(specsChanged && !hasAny('docs/TRACEABILITY.md'), 'Spec changes require docs/TRACEABILITY.md.');
 add(factoriesChanged && !hasAny('docs/DATA_FACTORY_GUIDE.md'), 'Factory/generator/builder/type changes require docs/DATA_FACTORY_GUIDE.md.');
 add(factoriesChanged && !hasAny('docs/FACTORY_CATALOG.md'), 'Factory/generator/builder/type changes require docs/FACTORY_CATALOG.md.');
-add(moduleCodeChanged && !hasAny('docs/MODULE_CATALOG.md') && !changed.some((p) => /^src\/modules\/[^/]+\/README\.md$/.test(p)), 'Module changes require docs/MODULE_CATALOG.md or the affected module README.');
+add(moduleCodeChanged && !hasAny('docs/MODULE_CATALOG.md') && !changed.some((p) => /^src\/specs\/[^/]+\/README\.md$/.test(p)), 'Module changes require docs/MODULE_CATALOG.md or the affected module README.');
 add(fixturesChanged && !hasAny('docs/ARCHITECTURE.md'), 'Fixture changes require docs/ARCHITECTURE.md.');
 add(fixturesChanged && !hasAny('docs/FIXTURE_GUIDE.md'), 'Fixture changes require docs/FIXTURE_GUIDE.md.');
 add(apiChanged && !hasAny('docs/API_GUIDE.md'), 'API client changes require docs/API_GUIDE.md.');

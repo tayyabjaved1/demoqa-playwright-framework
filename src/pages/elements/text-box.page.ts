@@ -1,6 +1,6 @@
 import { expect, type Page } from '@playwright/test';
-import { BasePage } from '../../../core/base-page';
-import type { TextBoxData } from '../../../data/types/test-data.types';
+import { BasePage } from '../../core/base-page';
+import type { TextBoxData } from '../../data/types/test-data.types';
 
 export class TextBoxPage extends BasePage {
   readonly path = '/text-box';

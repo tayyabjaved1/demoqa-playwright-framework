@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
-import { UserFactory } from '../../../data/factories/user.factory';
-import { StudentFactory } from '../../../data/factories/student.factory';
-import { StudentBuilder } from '../../../data/builders/student.builder';
+import { UserFactory } from '../../data/factories/user.factory';
+import { StudentFactory } from '../../data/factories/student.factory';
+import { StudentBuilder } from '../../data/builders/student.builder';
 
 test.describe('Data Factory Engine', { tag: '@regression' }, () => {
   test('creates unique runtime user data', async () => {

@@ -2,7 +2,7 @@
 
 ## Current API integration
 
-The starter contains a Book Store API client at `src/api/bookstore.client.ts` and an API spec at `src/modules/bookstore/tests/bookstore-api.spec.ts`.
+The starter contains a Book Store API client at `src/api/bookstore.client.ts` and an API spec at `src/specs/bookstore/bookstore-api.spec.ts`.
 
 ## Conventions for new API coverage
 
