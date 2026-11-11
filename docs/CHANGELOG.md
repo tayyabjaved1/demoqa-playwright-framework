@@ -2,6 +2,25 @@
 
 Notable framework changes are recorded here. Keep entries concise and include migration notes for breaking changes.
 
+## 1.4.1 - Centralized module docs (matching core-pw-e2e-tests)
+
+- Removed all 4 per-module `README.md` files (Elements, Forms, Book Store,
+  Factory checks). That pattern was this framework's own invention — core-pw-e2e-tests
+  has no per-module READMEs and centralizes everything in a handful of
+  `docs/*.md` files. Folded every module's content into one section per
+  module in `docs/MODULE_CATALOG.md`, under its existing summary table.
+- Replaced `docs/templates/MODULE_README.template.md` with
+  `docs/templates/MODULE_SECTION.template.md` — a template for adding a new
+  module's section to `MODULE_CATALOG.md`, not a standalone file.
+  (`docs/templates/FACTORY_README.template.md` is unrelated and unchanged —
+  it documents an individual factory, not a module.)
+- Updated every doc reference that pointed at a per-module README
+  (`docs/DOCUMENTATION_POLICY.md`, `docs/CHANGE_IMPACT_MATRIX.md`,
+  `docs/TEST_CATALOG.md`, `scripts/check-docs-changes.mjs`).
+- Migration: any external reference to `src/specs/<module>/README.md` must be
+  updated to `docs/MODULE_CATALOG.md`'s corresponding section.
+- Verified: `npm run typecheck` clean; full suite 6/6 passing.
+
 ## 1.4.0 - Layer-first directory structure
 
 - Restructured from module-first (`src/modules/<module>/{pages,tests}`) to

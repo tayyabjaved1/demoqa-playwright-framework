@@ -5,8 +5,8 @@ Use this checklist before opening a pull request.
 | I changed... | Check these areas | Expected evidence |
 |---|---|---|
 | Factory/generator/builder/type | Factory guide, factory catalog, examples, factory tests | New behavior, fields, constraints and uniqueness documented |
-| Spec file | Test catalog, traceability, module README if relevant | Scenario, tags, preconditions and assertions accurately listed |
-| Page Object/component | Module catalog, module README, test authoring guide if convention changed | Public methods, locator strategy and usage example documented |
+| Spec file | Test catalog, traceability, that module's MODULE_CATALOG.md section if relevant | Scenario, tags, preconditions and assertions accurately listed |
+| Page Object/component | MODULE_CATALOG.md section, test authoring guide if convention changed | Public methods, locator strategy and usage example documented |
 | Fixture | Architecture, fixture guide, authoring examples | Scope, setup, teardown, dependencies and cleanup documented |
 | API client | API guide and relevant module guide | Endpoint, payload, auth, response and cleanup behavior documented |
 | Config/CI/dependencies | README and configuration guide | New env vars, commands, versions and pipeline behavior documented |

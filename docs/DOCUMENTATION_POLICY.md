@@ -8,7 +8,7 @@ Documentation is maintained as part of the product, not as a one-time handover. 
 
 - Executable behavior and types are authoritative for implementation details.
 - `docs/` explains architecture, conventions, workflows, and test coverage.
-- Each module may have a local `README.md` for module-specific setup, workflows, and known limitations.
+- Each module has a section in `docs/MODULE_CATALOG.md` for module-specific setup, workflows, and known limitations — centralized, not a README per module (matching core-pw-e2e-tests' approach).
 - `docs/TEST_CATALOG.md` and `docs/TRACEABILITY.md` describe the current automated scenarios. Removed tests must be removed from these records in the same change.
 - `docs/CHANGELOG.md` records notable framework and coverage changes.
 
@@ -18,9 +18,9 @@ Do not document behavior that the code does not implement. If implementation and
 
 | Change | Required documentation |
 |---|---|
-| New/changed/removed test spec | `docs/TEST_CATALOG.md`, `docs/TRACEABILITY.md`; update module README when module behavior or setup changes |
+| New/changed/removed test spec | `docs/TEST_CATALOG.md`, `docs/TRACEABILITY.md`; update that module's `docs/MODULE_CATALOG.md` section when module behavior or setup changes |
 | New/changed/removed factory, generator, builder, trait or schema | `docs/DATA_FACTORY_GUIDE.md`, `docs/FACTORY_CATALOG.md`; update examples/types when public factory behavior changes |
-| New/changed/removed module or Page Object/component | `docs/MODULE_CATALOG.md`; add/update/remove that module's `README.md`; update test catalog if coverage changes |
+| New/changed/removed module or Page Object/component | `docs/MODULE_CATALOG.md` (summary table row + module section); update test catalog if coverage changes |
 | Fixture or test lifecycle change | `docs/ARCHITECTURE.md`, `docs/FIXTURE_GUIDE.md`, and relevant authoring examples |
 | API client/endpoint/helper change | `docs/API_GUIDE.md`; update module and test catalog if usage or coverage changes |
 | Playwright/npm/env/CI configuration change | `README.md`, `docs/CONFIGURATION.md`; update workflow docs if CI behavior changes |

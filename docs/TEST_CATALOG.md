@@ -15,4 +15,4 @@ This is a human-readable index of the current sample automation. Keep it synchro
 - Update the scenario description when assertions or preconditions change.
 - Remove rows when tests are deleted; do not leave deleted tests listed as active coverage.
 - If a test is skipped or blocked, state that explicitly and explain why.
-- Link detailed module-level coverage from the module README when the table becomes large.
+- Link detailed module-level coverage from that module's `docs/MODULE_CATALOG.md` section when the table becomes large.

@@ -38,7 +38,7 @@ add(specsChanged && !hasAny('docs/TEST_CATALOG.md'), 'Spec changes require docs/
 add(specsChanged && !hasAny('docs/TRACEABILITY.md'), 'Spec changes require docs/TRACEABILITY.md.');
 add(factoriesChanged && !hasAny('docs/DATA_FACTORY_GUIDE.md'), 'Factory/generator/builder/type changes require docs/DATA_FACTORY_GUIDE.md.');
 add(factoriesChanged && !hasAny('docs/FACTORY_CATALOG.md'), 'Factory/generator/builder/type changes require docs/FACTORY_CATALOG.md.');
-add(moduleCodeChanged && !hasAny('docs/MODULE_CATALOG.md') && !changed.some((p) => /^src\/specs\/[^/]+\/README\.md$/.test(p)), 'Module changes require docs/MODULE_CATALOG.md or the affected module README.');
+add(moduleCodeChanged && !hasAny('docs/MODULE_CATALOG.md'), 'Module changes require docs/MODULE_CATALOG.md.');
 add(fixturesChanged && !hasAny('docs/ARCHITECTURE.md'), 'Fixture changes require docs/ARCHITECTURE.md.');
 add(fixturesChanged && !hasAny('docs/FIXTURE_GUIDE.md'), 'Fixture changes require docs/FIXTURE_GUIDE.md.');
 add(apiChanged && !hasAny('docs/API_GUIDE.md'), 'API client changes require docs/API_GUIDE.md.');

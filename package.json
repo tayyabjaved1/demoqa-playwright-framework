@@ -1,6 +1,6 @@
 {
   "name": "demoqa-playwright-framework",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "private": true,
   "description": "Reusable Playwright + TypeScript automation framework demonstrated against DemoQA",
   "license": "MIT",
